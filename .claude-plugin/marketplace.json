@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "tutor-marketplace",
+  "description": "Adaptive, first-principles tutoring plugins for Claude Code.",
+  "owner": {
+    "name": "varunkhndlwal"
+  },
+  "plugins": [
+    {
+      "name": "feynman-tutor",
+      "source": "./",
+      "description": "An adaptive, first-principles tutor. Pick a subject, it builds you a course, learns how you learn, and keeps tuning its teaching so you learn faster."
+    }
+  ]
+}

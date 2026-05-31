@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+
+# A learner's own runtime state never belongs in the plugin repo.
+# These are created by the commands in the USER's working directory, not here.
+/learner/
+/courses/
+/.teaching/

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "feynman-tutor",
+  "displayName": "Feynman Tutor",
+  "version": "0.1.0",
+  "description": "An adaptive, first-principles tutor. Pick a subject, it builds you a course, learns how you learn, and keeps tuning its teaching so you learn faster.",
+  "author": {
+    "name": "varunkhndlwal"
+  },
+  "license": "MIT",
+  "keywords": ["learning", "tutor", "education", "feynman", "adaptive", "curriculum"]
+}
