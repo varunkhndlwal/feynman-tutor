@@ -13,7 +13,11 @@ Check for `learner/profile.md` in the working directory.
 3. **Build the first course** — run the `/new-course` flow. Ask what they want to learn,
    generate a `lesson_plan.md` for it, and scaffold `courses/<slug>/`.
 4. `/new-course` sets `.teaching/state.json` → `active_course`. Confirm it's set.
-5. Then fall through to step 1 below and start lesson 1.
+5. **Offer to version the workspace.** Mention this directory is theirs — plain files they can
+   `git init` and publish. If they want, run `git init` and write a minimal `.gitignore`
+   (`.DS_Store`, `*.log`). Engine upgrades (`/plugin update`) will keep working on this data, so
+   versioning it is how they keep their learning history. Don't force it; one offer.
+6. Then fall through to step 1 below and start lesson 1.
 
 **If `learner/profile.md` exists, skip onboarding** and go straight to step 1.
 

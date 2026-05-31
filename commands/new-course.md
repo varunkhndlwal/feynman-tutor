@@ -81,6 +81,7 @@ Create under `courses/<slug>/`:
 
   ```json
   {
+    "schema_version": 1,
     "subject": "<Subject>",
     "current_lesson": 1,
     "lessons_completed": [],
@@ -100,7 +101,7 @@ Create under `courses/<slug>/`:
 
 ## 4. Set the active course
 
-Write `.teaching/state.json` → `{ "active_course": "<slug>" }`. If switching between existing
-courses later, this is the only thing that changes.
+Write `.teaching/state.json` → `{ "schema_version": 1, "active_course": "<slug>" }`. If switching
+between existing courses later, only `active_course` changes.
 
 Confirm: "Course '<Subject>' created and set active. Run `/start-lesson` to begin lesson 1."

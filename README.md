@@ -63,6 +63,23 @@ Everything it writes lives in your working directory as plain files you own and 
 
 ---
 
+## Your workspace is yours
+
+The plugin is just the engine. Your learning — profile, courses, progress, every session note —
+lives in *your* working directory as plain files. So:
+
+- **Version and publish it.** `git init` your learning folder and push it anywhere. It's your
+  data; the plugin never holds it. (On first run the tutor offers to set this up.)
+- **Upgrades don't reset you.** When a new engine version ships, run `/plugin update` — the better
+  engine picks up right where you were, on your existing profile and history. The more you've
+  done, the better it teaches you, and upgrades only add to that.
+- **Forward-compatible by design.** State files carry a `schema_version`; a newer engine migrates
+  older workspaces forward in place and never drops your data.
+
+The engine improves over time; your accumulated learning carries across every version of it.
+
+---
+
 ## Commands
 
 | Command | What it does |

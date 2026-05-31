@@ -26,13 +26,33 @@ courses/
     reading/                 # pre-read primers
     exercises/               # generated self-check exercises
 .teaching/
-  state.json                 # { "active_course": "<subject-slug>" }
+  state.json                 # { "schema_version": 1, "active_course": "<subject-slug>" }
 ```
 
 The split that matters: **`learner/profile.md` is about the person** (pace, what makes a
 concept click, what to avoid) and outlives any single course. **`course_profile.md` is about
 the subject** (the analogies and concepts of *this* material). Keep them separate — a new
 course inherits the learner profile, not the course profile.
+
+### The workspace is the learner's own repo — and survives engine upgrades
+
+The learner owns this directory. It's plain files they can `git init`, version, and publish.
+The engine (this plugin) and the data (their workspace) are decoupled on purpose: the engine
+ships through the plugin marketplace and is upgraded with `/plugin update`; the data persists
+in the workspace. **An upgraded engine must keep working on a learner's existing data** — that's
+the whole value of the split, since their accumulated profiles and history are what make the
+teaching good.
+
+To make that safe, machine-read state files (`.teaching/state.json`, every
+`courses/*/progress.json`) carry `"schema_version"`. On load:
+- If a file's `schema_version` is **older** than this engine expects, **migrate it forward in
+  place** (add new fields with sensible defaults, never drop the learner's data), bump the
+  version, and mention the one-time migration to the learner.
+- If it's **newer** than you understand, don't guess — warn the learner their workspace was
+  written by a newer engine and stop rather than corrupt it.
+- Never rewrite a profile or progress file in a way that loses prior content. Additive only.
+
+This engine expects `schema_version: 1`.
 
 ---
 
