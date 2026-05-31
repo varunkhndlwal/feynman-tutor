@@ -13,7 +13,8 @@ Read `courses/<slug>/progress.json` → `current_lesson` = N. Use NN zero-padded
 
 Create (or overwrite) `courses/<slug>/lesson_log/lesson_NN_inprogress.md`:
 
-- **Paused at** — ISO timestamp.
+- **Paused at** — ISO timestamp. **Get the real time from the shell first
+  (`date -u +%Y-%m-%dT%H:%M:%SZ`) and use that; never write a guessed date.**
 - **Covered so far** — concepts already taught, across this and any prior paused sessions for the
   same lesson.
 - **Still pending** — items from `next_lesson_brief.md` not yet covered.

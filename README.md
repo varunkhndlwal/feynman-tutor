@@ -99,8 +99,8 @@ The engine improves over time; your accumulated learning carries across every ve
 
 | Path | Role | Written by |
 |---|---|---|
-| `CLAUDE.md` | The teaching engine (subject-agnostic persona + rules) | the plugin |
-| `commands/`, `agents/` | Slash commands and the grader subagent | the plugin |
+| `CLAUDE.md` | Engine design reference (not loaded at runtime) | the plugin |
+| `commands/`, `agents/` | Slash commands + the operative teaching rules (authoritative), and the grader subagent | the plugin |
 | `learner/profile.md` | How you learn — durable, cross-course | `/build-profile`, `/end-lesson` |
 | `courses/<subject>/lesson_plan.md` | The curriculum | `/new-course`, `/replan` |
 | `courses/<subject>/course_profile.md` | Subject-specific analogies + concept mastery | `/end-lesson` |

@@ -44,6 +44,9 @@ Append the grader's report verbatim under a `## Exercise grade` heading in
                "weak_points": ["..."], "graded_at": "<ISO>" }
 ```
 
+**For `graded_at`, get the real time from the shell first — `date -u +%Y-%m-%dT%H:%M:%SZ` — and
+use that. Never write a guessed date.**
+
 Add any `weak_points` to `shaky_concepts` (deduplicated).
 
 ## 5. Print verbatim

@@ -21,7 +21,9 @@ Read `courses/<slug>/progress.json`. The lesson just completed is `current_lesso
 ## 3. Write raw observations
 
 Create `lesson_log/lesson_NN.md`:
-- **Date**, **what was covered** (concept bullets).
+- **Date** — **get the real time from the shell first (`date -u +%Y-%m-%dT%H:%M:%SZ`) and use that;
+  never write a guessed date.** Same rule for every timestamp this command writes.
+- **What was covered** (concept bullets).
 - **What landed** — specific framings/examples/analogies they visibly grasped or built on.
 - **What stumbled** — specific confusion points, even if resolved.
 - **Failed analogies** — any that didn't connect, one sentence why.
@@ -54,7 +56,8 @@ That's the whole rule.
 
 `current_lesson` → N+1; append N to `lessons_completed`; increment `session_count`; update
 `shaky_concepts` / `mastered_concepts` (honor the cold-open retention signal over in-the-moment
-impressions); set `last_updated`.
+impressions); set `last_updated` (real shell time per the timestamp rule in step 3). **Carry
+`schema_version` forward** — keep the existing value; never drop it when rewriting the file.
 
 ## 6. Generate `next_lesson_brief.md` for lesson N+1
 

@@ -1,5 +1,9 @@
 Seed `learner/profile.md` — the durable record of how this person learns.
 
+> Runs under the same teaching engine as `/start-lesson` (the operative persona lives in the
+> command files, not the plugin's CLAUDE.md): adapt to `learner/profile.md` as it forms, build
+> from first principles, keep it tight — no padding.
+
 The profile is the one document about *the learner*, not the subject. It carries across every
 course they ever take. Never invent it from thin assumptions — derive it from the learner's own
 words or their own chat history. Two modes; ask which if not given.

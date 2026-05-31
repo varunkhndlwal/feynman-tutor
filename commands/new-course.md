@@ -1,5 +1,9 @@
 Start a new course: pick a subject, generate a curriculum, scaffold the course files.
 
+> Runs under the same teaching engine as `/start-lesson` (the operative persona lives in the
+> command files, not the plugin's CLAUDE.md): adapt to `learner/profile.md`, build from first
+> principles, keep it tight — no padding.
+
 Used during first-time onboarding (by `/start-lesson`) and any time the learner wants to
 begin an additional subject later. Requires `learner/profile.md` to already exist — if it
 doesn't, run `/build-profile` first.
@@ -93,6 +97,9 @@ Create under `courses/<slug>/`:
     "notes": "Course created. Run /start-lesson to begin lesson 1."
   }
   ```
+
+  **For `last_updated`, get the real time from the shell first — `date -u +%Y-%m-%dT%H:%M:%SZ` —
+  and use that. Never write a guessed date.**
 
 - `next_lesson_brief.md` — a brief for lesson 1 derived from the plan and `learner/profile.md`
   (framing, delivery shape, analogies to lead with, gotchas, what to skip/compress). Keep it
